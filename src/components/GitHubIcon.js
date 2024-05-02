@@ -1,5 +1,5 @@
 import React from "react";
-export const GitHubIcon = ({size = 24, height, width, ...props}) => {
+export const GitHubIcon = ({size = 24, width, height, ...props}) => {
     return (
         <svg
             fill="none"

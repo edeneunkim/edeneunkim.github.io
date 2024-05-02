@@ -1,18 +1,23 @@
 import React from 'react';
-import {  Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu,
+import {  Navbar, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu,
     NavbarMenuItem } from "@nextui-org/navbar";
 import { Link } from '@nextui-org/react';
 import {GitHubIcon} from "./GitHubIcon";
+import ThemeSwitch from "./ThemeSwitch";
+import {LinkedInIcon} from "./LinkedInIcon";
 
-function HomeBar() {
+function HomeBar({toggle}) {
     return (
-        <Navbar isBordered>
+        <Navbar>
             <NavbarContent>
                 <NavbarItem>
                     Home
                 </NavbarItem>
                 <NavbarItem>
                     Projects
+                </NavbarItem>
+                <NavbarItem>
+                    Experience
                 </NavbarItem>
                 <NavbarItem>
                     Resume
@@ -25,11 +30,18 @@ function HomeBar() {
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
-                <NavbarItem>
-                    <Link href="https://github.com/edeneunkim" rel="noopener noreferrer" target="_blank"
-                          color="foreground">
-                        <GitHubIcon />
+                <NavbarItem className="flex">
+                    <Link isExternal href="https://github.com/edeneunkim">
+                        <GitHubIcon className="text-default-500"/>
                     </Link>
+                </NavbarItem>
+                <NavbarItem className="flex">
+                    <Link isExternal href="https://linkedin.com/in/eden-kim-cs">
+                        <LinkedInIcon />
+                    </Link>
+                </NavbarItem>
+                <NavbarItem>
+                    <ThemeSwitch toggle={toggle}/>
                 </NavbarItem>
             </NavbarContent>
         </Navbar>
