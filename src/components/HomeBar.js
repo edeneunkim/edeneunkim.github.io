@@ -1,6 +1,5 @@
 import React from 'react';
-import {  Navbar, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu,
-    NavbarMenuItem } from "@nextui-org/navbar";
+import {  Navbar, NavbarContent, NavbarItem} from "@nextui-org/navbar";
 import { Link } from '@nextui-org/react';
 import {GitHubIcon} from "./GitHubIcon";
 import ThemeSwitch from "./ThemeSwitch";
