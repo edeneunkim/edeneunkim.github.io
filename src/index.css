@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.light {
+    --background: 255, 255, 255;
+    --foreground: 0, 0, 0;
+    --primary: 0, 0, 0;
+    background: rgba(var(--background));
+}
+
+.dark {
+    --background: 0, 0, 0;
+    --foreground: 100, 100, 100;
+    --primary: 255, 255, 255;
+    background: rgba(var(--background));
+}
+
+pbold {
+    font-weight: 700;
+}
+
 * {
     @apply transition-colors
 }
