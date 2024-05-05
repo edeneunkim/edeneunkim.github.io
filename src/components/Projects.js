@@ -2,7 +2,9 @@ import * as React from 'react';
 
 function Projects() {
     return (
-        <h1>Eden kIM</h1>
+        <div id='projects' className="h-screen flex items-center justify-center">
+            <pbold className="text-primary">PRojects</pbold>
+        </div>
     );
 }
 
