@@ -24,20 +24,20 @@ function HomeBar({toggle, mode}) {
             <Navbar maxWidth='xl' className="bg-background fixed">
                 <NavbarContent justify="start">
                     <NavbarBrand as="li" className="gap-2 max-w-fit" onClick={() => scrollToSection('home')}>
-                        <EIcon mode={mode}/>
-                        <pbold className="text-primary">EDEN</pbold>
+                        <EIcon mode={mode} />
+                        <p className="text-primary bold barItem">EDEN</p>
                     </NavbarBrand>
                     <NavbarItem onClick={() => scrollToSection('projects')}>
-                        <p className="text-primary">Projects</p>
+                        <p className="text-primary barItem">Projects</p>
                     </NavbarItem>
                     <NavbarItem onClick={() => scrollToSection('experience')}>
-                        <p className="text-primary">Experience</p>
+                        <p className="text-primary barItem">Experience</p>
                     </NavbarItem>
                     <NavbarItem onClick={() => scrollToSection('resume')}>
-                        <p className="text-primary">Resume</p>
+                        <p className="text-primary barItem">Resume</p>
                     </NavbarItem>
                     <NavbarItem onClick={() => scrollToSection('contacts')}>
-                        <p className="text-primary">Contacts</p>
+                        <p className="text-primary barItem">Contacts</p>
                     </NavbarItem>
                 </NavbarContent>
                 <NavbarContent justify="end">
