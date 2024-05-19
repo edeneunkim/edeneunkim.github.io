@@ -21,12 +21,15 @@ function HomeBar({toggle, mode}) {
     };
     return (
         <div>
-            <Navbar maxWidth='xl' className="bg-background fixed">
+            <Navbar isBordered maxWidth='xl' className="fixed">
                 <NavbarContent justify="start">
                     <NavbarBrand as="li" className="gap-2 max-w-fit" onClick={() => scrollToSection('home')}>
                         <EIcon mode={mode} />
                         <p className="text-primary bold barItem">EDEN</p>
                     </NavbarBrand>
+                    <NavbarItem onClick={() => scrollToSection('about')}>
+                        <p className="text-primary barItem">About</p>
+                    </NavbarItem>
                     <NavbarItem onClick={() => scrollToSection('projects')}>
                         <p className="text-primary barItem">Projects</p>
                     </NavbarItem>

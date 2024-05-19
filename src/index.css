@@ -9,7 +9,7 @@
     /*background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);*/
     background: linear-gradient(45deg, #ffffff, #e1eaee, #ffffff, #e1eaee);
     background-size: 600% 600%;
-    animation: 10s ease-in-out infinite bg-animate;
+    /*animation: 10s ease-in-out infinite bg-animate;*/
 }
 
 .dark {
@@ -19,7 +19,7 @@
     /*background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);*/
     background: linear-gradient(45deg, #000000, #404040, #000000, #404040);
     background-size: 600% 600%;
-    animation: 10s ease-in-out infinite bg-animate;
+    /*animation: 10s ease-in-out infinite bg-animate;*/
 }
 
 p.bold {
@@ -32,10 +32,11 @@ p.barItem {
 
 div.home {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     padding-top: 100px;
+    padding-bottom: 200px;
 }
 
 p.title {
@@ -44,9 +45,20 @@ p.title {
 }
 
 p.subtitle {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
     text-align: center;
+}
+
+.homeButton {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
 }
 
 .animate-header {
@@ -63,7 +75,7 @@ p.subtitle {
 
 @keyframes animation1 {
     0% {
-        transform: translateY(20%);
+        transform: translateY(40%);
         opacity: 0;
     }
 
@@ -75,7 +87,7 @@ p.subtitle {
 
 @keyframes animation2 {
     0% {
-        transform: translateY(80%);
+        transform: translateY(100%);
         opacity: 0;
     }
 

@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Experience from "./components/Experience";
 import Resume from "./components/Resume";
 import Contacts from "./components/Contacts";
+import About from "./components/About";
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);
@@ -15,6 +16,7 @@ function App() {
         <div className={`${darkMode ? 'dark' : 'light'}`}>
             <HomeBar toggle={toggleDarkMode} mode={darkMode}/>
             <Home />
+            <About />
             <Projects />
             <Experience />
             <Resume />
