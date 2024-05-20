@@ -6,19 +6,21 @@ import ThemeSwitch from "./ThemeSwitch";
 import {LinkedInIcon} from "./LinkedInIcon";
 import EIcon from "./EIcon";
 
+
+// from https://github.com/mui/material-ui/tree/v5.15.16/docs/data/material/getting-started/templates/landing-page
+export const scrollToSection = (sectionId) => {
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+        const targetScroll = sectionElement.offsetTop;
+        sectionElement.scrollIntoView({ behavior: 'smooth' });
+        window.scrollTo({
+            top: targetScroll,
+            behavior: 'smooth',
+        });
+    }
+};
+
 function HomeBar({toggle, mode}) {
-    // from https://github.com/mui/material-ui/tree/v5.15.16/docs/data/material/getting-started/templates/landing-page
-    const scrollToSection = (sectionId) => {
-        const sectionElement = document.getElementById(sectionId);
-        if (sectionElement) {
-            const targetScroll = sectionElement.offsetTop;
-            sectionElement.scrollIntoView({ behavior: 'smooth' });
-            window.scrollTo({
-                top: targetScroll,
-                behavior: 'smooth',
-            });
-        }
-    };
     return (
         <div>
             <Navbar isBordered maxWidth='xl' className="fixed">
@@ -36,8 +38,11 @@ function HomeBar({toggle, mode}) {
                     <NavbarItem onClick={() => scrollToSection('experience')}>
                         <p className="text-primary barItem">Experience</p>
                     </NavbarItem>
-                    <NavbarItem onClick={() => scrollToSection('resume')}>
-                        <p className="text-primary barItem">Resume</p>
+                    {/*<NavbarItem onClick={() => scrollToSection('resume')}>*/}
+                    {/*    <p className="text-primary barItem">Resume</p>*/}
+                    {/*</NavbarItem>*/}
+                    <NavbarItem onClick={() => scrollToSection('education')}>
+                        <p className="text-primary barItem">Education</p>
                     </NavbarItem>
                     <NavbarItem onClick={() => scrollToSection('contacts')}>
                         <p className="text-primary barItem">Contacts</p>

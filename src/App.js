@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import Resume from "./components/Resume";
 import Contacts from "./components/Contacts";
 import About from "./components/About";
+import Education from "./components/Education";
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);
@@ -19,7 +20,8 @@ function App() {
             <About />
             <Projects />
             <Experience />
-            <Resume />
+            {/*<Resume />*/}
+            <Education />
             <Contacts />
         </div>
     );
