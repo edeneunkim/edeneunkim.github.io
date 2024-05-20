@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         background: "rgba(var(--background))",
         foreground: "rgba(var(--foreground))",
-        primary: "rgba(var(--primary))"
+        primary: "rgba(var(--primary))",
+        secondary: "rgba(var(--secondary))"
       }
     },
   },

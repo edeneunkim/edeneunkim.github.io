@@ -17,7 +17,7 @@ function App() {
         <div className={`${darkMode ? 'dark' : 'light'}`}>
             <HomeBar toggle={toggleDarkMode} mode={darkMode}/>
             <Home />
-            <About />
+            <About mode={darkMode}/>
             <Projects />
             <Experience />
             {/*<Resume />*/}

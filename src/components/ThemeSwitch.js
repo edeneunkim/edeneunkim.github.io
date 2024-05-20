@@ -1,5 +1,5 @@
-import {LightIcon} from "./LightIcon";
-import {DarkIcon} from "./DarkIcon";
+import {LightIcon} from "./Icons/LightIcon";
+import {DarkIcon} from "./Icons/DarkIcon";
 import {Switch} from "@nextui-org/react";
 import React from "react";
 

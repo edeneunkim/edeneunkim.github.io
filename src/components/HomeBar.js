@@ -1,10 +1,10 @@
 import React from 'react';
 import {  Navbar, NavbarContent, NavbarItem, NavbarBrand } from "@nextui-org/navbar";
 import { Link } from '@nextui-org/react';
-import {GitHubIcon} from "./GitHubIcon";
+import {GitHubIcon} from "./Icons/GitHubIcon";
 import ThemeSwitch from "./ThemeSwitch";
-import {LinkedInIcon} from "./LinkedInIcon";
-import EIcon from "./EIcon";
+import {LinkedInIcon} from "./Icons/LinkedInIcon";
+import EIcon from "./Icons/EIcon";
 
 
 // from https://github.com/mui/material-ui/tree/v5.15.16/docs/data/material/getting-started/templates/landing-page
