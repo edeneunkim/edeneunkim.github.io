@@ -18,7 +18,7 @@ function App() {
             <HomeBar toggle={toggleDarkMode} mode={darkMode}/>
             <Home />
             <About mode={darkMode}/>
-            <Projects />
+            <Projects mode={darkMode}/>
             <Experience />
             {/*<Resume />*/}
             <Education />
