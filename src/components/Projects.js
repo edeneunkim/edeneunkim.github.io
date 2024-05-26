@@ -7,6 +7,12 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import { alpha } from '@mui/material';
+import Calculator from './images/Calculator.png';
+import CalculatorDark from './images/Calculator Dark.png';
+import AA from './images/AA.png';
+import AAdark from './images/AA dark.png';
+import WM from './images/WM.png';
+import WMdark from './images/WM Dark.png';
 
 function Projects({mode}) {
     const items = [
@@ -16,8 +22,8 @@ function Projects({mode}) {
                 'Alex Anonymous is an iOS app aimed to support users in their recovery from addiction, with features ' +
                 'such as a fine-tuned AI chatbot to provide a personalized experience.',
             tech: 'Swift',
-            imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
-            imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+            imageLight: AA,
+            imageDark: AAdark,
             link: 'https://github.com/Parayeets/AlexAnonymous'
         },
         {
@@ -25,8 +31,8 @@ function Projects({mode}) {
             description:
                 'An aesthetically designed calculator app designed for iPad devices.',
             tech: 'Swift',
-            imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-            imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+            imageLight: Calculator,
+            imageDark: CalculatorDark,
             link: 'https://github.com/edeneunkim/iPad-Calculator'
         },
         {
@@ -34,8 +40,8 @@ function Projects({mode}) {
             description:
                 'WeaveMaster is a game where the user must dodge incoming projectiles and collect orbs to gain bonuses.',
             tech: 'Java',
-            imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-            imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+            imageLight: WM,
+            imageDark: WMdark,
             link: 'https://github.com/edeneunkim/WeaveMaster'
         },
     ];
@@ -45,7 +51,6 @@ function Projects({mode}) {
         setSelectedItemIndex(index);
     };
 
-    const selectedFeature = items[selectedItemIndex];
     return (
         <div id='projects' className="projects">
             <p className="sectionTitle text-primary">Projects</p>
@@ -59,9 +64,9 @@ function Projects({mode}) {
                             alignItems="flex-start"
                             spacing={2}
                             useFlexGap
-                            sx={{ width: '100%', display: { xs: 'none', sm: 'flex' } }}
+                            sx={{width: '100%', display: {xs: 'none', sm: 'flex'}}}
                         >
-                            {items.map(({ title, description, tech, link }, index) => (
+                            {items.map(({title, description, tech, link}, index) => (
                                 <Card
                                     key={index}
                                     variant="outlined"
@@ -73,15 +78,16 @@ function Projects({mode}) {
                                         width: '100%',
                                         background: 'none',
                                         backgroundColor:
-                                            selectedItemIndex === index ? (mode ? 'grey.900' : 'action.selected'): undefined,
+                                            selectedItemIndex === index ? (mode ? 'grey.900' : 'action.selected') : undefined,
                                         borderColor: () => {
                                             if (mode) {
                                                 return selectedItemIndex === index
                                                     ? 'secondary.dark'
                                                     : 'grey.800';
                                             }
-                                            return selectedItemIndex === index ? 'primary.light' : 'grey.200';
+                                            return selectedItemIndex === index ? 'primary.light' : 'grey.300';
                                         },
+                                        borderRadius: 3,
                                         ':hover': mode ? {background: alpha('#9575cd', 0.25)} : ''
                                     }}
                                 >
@@ -90,8 +96,8 @@ function Projects({mode}) {
                                             width: '100%',
                                             display: 'flex',
                                             textAlign: 'left',
-                                            flexDirection: { xs: 'column', md: 'row' },
-                                            alignItems: { md: 'center' },
+                                            flexDirection: {xs: 'column', md: 'row'},
+                                            alignItems: {md: 'center'},
                                             gap: 2.5,
                                         }}
                                     >
@@ -110,7 +116,7 @@ function Projects({mode}) {
                                             }}
                                         >
                                         </Box>
-                                        <Box sx={{ textTransform: 'none' }}>
+                                        <Box sx={{textTransform: 'none'}}>
                                             <p className="text-primary projTitle">
                                                 {title}
                                             </p>
@@ -121,14 +127,14 @@ function Projects({mode}) {
                                                 Technologies: {tech}
                                             </p>
                                             <Link
-                                                color= {mode ? 'secondary' : 'primary'}
+                                                color={mode ? 'secondary' : 'primary'}
                                                 variant="body2"
                                                 fontWeight="bold"
                                                 sx={{
                                                     display: 'inline-flex',
                                                     alignItems: 'center',
-                                                    '& > svg': { transition: '0.2s' },
-                                                    '&:hover > svg': { transform: 'translateX(2px)' },
+                                                    '& > svg': {transition: '0.2s'},
+                                                    '&:hover > svg': {transform: 'translateX(2px)'},
                                                 }}
                                                 onClick={(event) => {
                                                     event.stopPropagation();
@@ -139,7 +145,7 @@ function Projects({mode}) {
                                                 <span>Learn more</span>
                                                 <ChevronRightRoundedIcon
                                                     fontSize="small"
-                                                    sx={{ mt: '1px', ml: '2px' }}
+                                                    sx={{mt: '1px', ml: '2px'}}
                                                 />
                                             </Link>
                                         </Box>
@@ -153,15 +159,22 @@ function Projects({mode}) {
                         item
                         xs={12}
                         md={6}
-                        sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%' }}
+                        sx={{display: {xs: 'none', sm: 'flex'}, width: '100%'}}
                     >
                         <Card
                             variant="outlined"
                             sx={{
                                 height: '100%',
                                 width: '100%',
-                                display: { xs: 'none', sm: 'flex' },
+                                display: {xs: 'none', sm: 'flex'},
                                 pointerEvents: 'none',
+                                borderColor: () => {
+                                    if (mode) {
+                                        return 'grey.800'
+                                    }
+                                    return 'grey.300';
+                                },
+                                borderRadius: 3
                             }}
                         >
                             <Box
@@ -170,12 +183,10 @@ function Projects({mode}) {
                                     width: 420,
                                     height: 500,
                                     backgroundSize: 'contain',
-                                    backgroundImage: () =>
-                                       mode
-                                            ? items[selectedItemIndex].imageLight
-                                            : items[selectedItemIndex].imageDark,
                                 }}
                             />
+                            <img src={mode ? items[selectedItemIndex].imageDark : items[selectedItemIndex].imageLight}
+                                 alt="" style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
                         </Card>
                     </Grid>
                 </Grid>
