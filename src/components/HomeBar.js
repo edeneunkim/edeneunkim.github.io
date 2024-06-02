@@ -51,12 +51,12 @@ function HomeBar({toggle, mode}) {
                 <NavbarContent justify="end">
                     <NavbarItem className="flex">
                         <Link isExternal href="https://github.com/edeneunkim">
-                            <GitHubIcon className="text-default-500"/>
+                            <GitHubIcon width={26} height={26} className="text-default-500"/>
                         </Link>
                     </NavbarItem>
                     <NavbarItem className="flex">
                         <Link isExternal href="https://linkedin.com/in/eden-kim-cs">
-                            <LinkedInIcon />
+                            <LinkedInIcon width={24} height={24}/>
                         </Link>
                     </NavbarItem>
                     <NavbarItem>

@@ -82,7 +82,7 @@ p.sectionTitle {
 .aboutBox {
     border: 1px solid #ccc;
     border-radius: 10px;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     width: 30%;
     height: 300px;
     display: flex;
@@ -166,7 +166,27 @@ div.experience {
     /*padding-top: 50px;*/
     /*padding-bottom: 200px;*/
     padding-top: 50px;
-    margin: 0 auto;
+    margin: 150px auto 0;
+}
+
+
+/*Contacts*/
+div.contacts {
+    width: 100%;
+    height: 100vh;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*padding-top: 50px;*/
+    /*padding-bottom: 200px;*/
+    padding-top: 50px;
+    margin: 150px auto 0;
+}
+
+div.contactsContainer {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 

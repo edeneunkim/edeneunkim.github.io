@@ -3,7 +3,7 @@ import * as React from 'react';
 function Education() {
     return (
         <div id='education'>
-            <p>UBC</p>
+            <p className="sectionTitle text-primary">Education</p>
         </div>
     );
 }

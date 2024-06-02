@@ -3,9 +3,9 @@ export const GitHubIcon = ({size = 26, width, height, ...props}) => {
     return (
         <svg
             fill="none"
-            height={size || height}
+            height={height}
             viewBox="0 0 24 24"
-            width={size || width}
+            width={width}
             {...props}
         >
             <path
