@@ -35,18 +35,6 @@ function HomeBar({toggle, mode}) {
                     <NavbarItem onClick={() => scrollToSection('projects')}>
                         <p className="text-primary barItem">Projects</p>
                     </NavbarItem>
-                    <NavbarItem onClick={() => scrollToSection('experience')}>
-                        <p className="text-primary barItem">Experience</p>
-                    </NavbarItem>
-                    {/*<NavbarItem onClick={() => scrollToSection('resume')}>*/}
-                    {/*    <p className="text-primary barItem">Resume</p>*/}
-                    {/*</NavbarItem>*/}
-                    <NavbarItem onClick={() => scrollToSection('education')}>
-                        <p className="text-primary barItem">Education</p>
-                    </NavbarItem>
-                    <NavbarItem onClick={() => scrollToSection('contacts')}>
-                        <p className="text-primary barItem">Contacts</p>
-                    </NavbarItem>
                 </NavbarContent>
                 <NavbarContent justify="end">
                     <NavbarItem className="flex">

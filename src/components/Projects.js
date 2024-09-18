@@ -64,7 +64,7 @@ function Projects({mode}) {
                             alignItems="flex-start"
                             spacing={2}
                             useFlexGap
-                            sx={{width: '100%', display: {xs: 'none', sm: 'flex'}}}
+                            sx={{width: '100%', display: 'flex'}}
                         >
                             {items.map(({title, description, tech, link}, index) => (
                                 <Card
@@ -159,14 +159,14 @@ function Projects({mode}) {
                         item
                         xs={12}
                         md={6}
-                        sx={{display: {xs: 'none', sm: 'flex'}, width: '100%'}}
+                        sx={{display: 'flex', width: '100%'}}
                     >
                         <Card
                             variant="outlined"
                             sx={{
                                 height: '100%',
                                 width: '100%',
-                                display: {xs: 'none', sm: 'flex'},
+                                display: 'flex',
                                 pointerEvents: 'none',
                                 borderColor: () => {
                                     if (mode) {
@@ -185,8 +185,8 @@ function Projects({mode}) {
                                     backgroundSize: 'contain',
                                 }}
                             />
-                            <img src={mode ? items[selectedItemIndex].imageDark : items[selectedItemIndex].imageLight}
-                                 alt="" style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
+                            <img className="projImage" src={mode ? items[selectedItemIndex].imageDark : items[selectedItemIndex].imageLight}
+                                 alt=""/>
                         </Card>
                     </Grid>
                 </Grid>
