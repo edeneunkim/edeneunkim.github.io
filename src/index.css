@@ -172,12 +172,6 @@ p.barItem {
     justify-content: space-evenly;
 }
 
-@media (max-width: 1250px) {
-    .projImage {
-        object-fit: scale-down;
-    }
-}
-
 @media (max-width: 768px) {
     .aboutContainer {
         flex-direction: column;
