@@ -161,6 +161,7 @@ p.barItem {
 /*Contacts*/
 .contacts {
     padding-top: 100px;
+    padding-bottom: 100px;
     width: 100%;
     height: auto;
     justify-content: center;
